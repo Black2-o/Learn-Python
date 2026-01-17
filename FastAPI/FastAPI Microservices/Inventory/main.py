@@ -56,6 +56,6 @@ def get_product(pk: str):
     return Product.get(pk)
 
 
-@app.delete("/products/delete/{pk}")
+@app.delete("/products/{pk}")
 def delete_product(pk: str):
     return Product.delete(pk)

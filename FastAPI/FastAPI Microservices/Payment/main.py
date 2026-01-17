@@ -67,6 +67,7 @@ async def create_order(request: Request, background_tasks: BackgroundTasks):
     return order
 
 def order_completed(order:Order):
-    time.sleep(20)
+    time.sleep(10)
     order.status = "completed"
     order.save()
+    redis.xadd("order_completed", order.dict(), '*')

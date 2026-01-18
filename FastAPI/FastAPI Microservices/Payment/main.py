@@ -20,6 +20,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 # This should be different database. Each Microservice should have its own database but for now redis give one so use one now.
 redis = get_redis_connection(
     host=os.getenv("R_HOST"),
@@ -40,6 +48,10 @@ class Order(HashModel):
         database = redis
 
 
+
+@app.get("/orders/")
+def get_orders():
+    return [format(pk) for pk in Order.all_pks()]
 
 @app.get("/order/{pk}")
 def get_order(pk: str):

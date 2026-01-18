@@ -5,7 +5,7 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
+  // SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -15,22 +15,22 @@ import {
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/dashboard",
     icon: Home,
   },
   {
     title: "Add Product",
-    url: "#",
+    url: "/create-product",
     icon: BadgePlus,
   },
   {
     title: "Orders",
-    url: "#",
+    url: "/orders",
     icon: ShoppingBasket,
   },
   {
-    title: "Settings",
-    url: "#",
+    title: "Order Create",
+    url: "/create-order",
     icon: Settings,
   },
 ]

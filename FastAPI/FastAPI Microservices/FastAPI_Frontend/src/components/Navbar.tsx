@@ -15,7 +15,7 @@ export function Navbar() {
     const { setTheme } = useTheme()
 
     return (
-        <nav className="fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-6 py-3 border-b shadow-sm z-50">
+        <nav className="fixed top-0 left-0 w-full flex items-center justify-between px-4 md:px-6 py-3 border-b shadow-sm z-999 bg-white dark:bg-gray-900 border-b-slate-200 dark:border-b-slate-700 h-16">
             {/* Left Section: Logo & Mobile Menu */}
             <div className="flex items-center gap-4">
                 {/* Logo */}

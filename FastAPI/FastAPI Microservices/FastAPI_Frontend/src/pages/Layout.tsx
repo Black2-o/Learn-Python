@@ -10,7 +10,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <AppSidebar />
             <main className="w-full">
                 <div className="flex flex-1 mt-16">
-                    {/* <SidebarTrigger /> */}
+                    <SidebarTrigger />
                     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
                         <Navbar />
                         {children}
